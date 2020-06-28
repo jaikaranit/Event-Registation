@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+
+<html >
+<head>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="./css/user.css">  
+	
+    <title></title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<body>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+	<div class="modal-header">
+	  <span class="close">&times;</span>
+	  <h2>Registration</h2>
+	</div>
+	<div class="modal_middle">
+		<form class="register_form">
+		<table>
+		<tr>
+			<td><h4>Department</h4></td>
+			<td class="right"><input type="text" name="dept" id="dept_name" class="regi_form" disabled="disabled"></td>
+		</tr>
+		<tr>
+			<td><h4>Email-ID</h4></td>
+			<td class="right"><input type="email" name="email" id="email_addr" class="regi_form"></td>
+		</tr>
+		<tr>
+			<td><h4>Phone Number</h4></td>
+			<td class="right"><input type="number" name="phone" id="phone_num" class="regi_form"></td>
+		</tr>
+		<tr>
+			<td><h4>College Name</h4></td>
+			<td class="right"><input type="text" name="clg" id="clg_name" class="regi_form"></td>
+		</tr>
+			<center><td colspan="2"><button class="event_button" id="insert" class="final_reg">Register</button></td></center>
+		</tr>
+		</table>
+			<p id="output"></p>
+			
+		</form>
+	</div>
+  </div>
+</div>
+<div id="myModal1" class="modal1">
+  <div class="modal-content1">
+	<div class="modal-header1">
+	  <span class="close1">&times;</span>
+	  <h2>Participants</h2>
+	  <p id="textres"></p>
+	</div>
+  </div>
+</div>
+
+<div class="main">
+	
+	<div class="top">
+		<div class="top1">
+			<div class="one"><h1>Kongu Engineering College</h1></div>
+			<div class="two"><p>Perundurai,Erode</p></div>
+		</div>
+	</div>
+</div>
+<button class="record"  id="student_record"><a href="nextuserpage.html">Student Record</a></button>
+<div class="second1">
+	<div class="extra">
+		<div class="second2">
+			<div class="event">
+					
+					<h3>Department of Civil Engineering</h3>
+					<span>International Conference on Smart Sustainable Materials and Technologies 2020</span>
+					<button class="event_button" id="myBtn">Register</button>
+					<button class="event_button" id="view">Students Registered</button>
+				</div>
+				<div class="event">
+					
+					<h3>Department of  Mechanical Engineering</h3>
+					<span>International Conference on Smart Electronics and Communication 2020</span>
+					<button class="event_button" id="myBtn1">Register</button>
+					<button class="event_button" id="view1">Students Registered</button>
+				</div>
+				<div class="event">
+					
+					<h3>Department of Chemical Engineering</h3>
+					<span>Online Workshop on Waste to Biofuels 2020</span>
+					<button class="event_button" id="myBtn2">Register</button>
+					<button class="event_button" id="view2">Students Registered</button>
+				</div>
+				<div class="event">
+					
+					<h3>Department of Food Technology</h3>
+					<span>E-Day 2020</span>
+					<button class="event_button" id="myBtn3">Register</button>
+					<button class="event_button" id="view3">Students Registered</button>
+				</div>
+				<div class="event">
+					
+					<h3>Department of Computer Science & Engineering</h3>
+					<span>Role of Data analytics and Cloud Computing in Internet of Things 2020</span>
+					<button class="event_button" id="myBtn4">Register</button>
+					<button class="event_button" id="view4">Students Registered</button>
+				</div>
+				<div class="event">
+					
+					<h3>Department of Information Technology</h3>
+					<span>Online Webinar on Mobile application 2020</span>
+					<button class="event_button" id="myBtn5">Register</button>
+					<button class="event_button" id="view5">Students Registered</button>
+				</div>
+				<div class="event">
+					
+					<h3>Department of Electronics and Instrumentation Engineering </h3>
+					<span>Online Faculty Development Programme on Recent Advancements in Electric Vehicle 2020</span>
+					<button class="event_button" id="myBtn6">Register</button>
+					<button class="event_button" id="view6">Students Registered</button>
+				</div>
+				<div class="event">
+					
+					<h3>Department of Electronics and Communication Engineering</h3>
+					<span>Second International Conference on Advances and Developments in Electronics and Communication Engineering 2020</span>
+					<button class="event_button" id="myBtn7">Register</button>
+					<button class="event_button" id="view7">Students Registered</button>
+				</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+var modal = document.getElementById("myModal");
+var modal1 = document.getElementById("myModal1");
+var btn = document.getElementById("myBtn");
+var btn1 = document.getElementById("myBtn1");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+var btn4 = document.getElementById("myBtn4");
+var btn5 = document.getElementById("myBtn5");
+var btn6 = document.getElementById("myBtn6");
+var btn7 = document.getElementById("myBtn7");
+var ins=document.getElementById("insert");
+var b = document.getElementById("view");
+var b1 = document.getElementById("view1");
+var b2 = document.getElementById("view2");
+var b3 = document.getElementById("view3");
+var b4 = document.getElementById("view4");
+var b5 = document.getElementById("view5");
+var b6 = document.getElementById("view6");
+var b7 = document.getElementById("view7");
+var span = document.getElementsByClassName("close")[0];
+var span1 = document.getElementsByClassName("close1")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+  document.getElementById("dept_name").defaultValue = "civil";
+  
+}
+ins.onclick=function(){
+  var dept=document.getElementById("dept_name").value;
+  var em=document.getElementById("email_addr").value;
+  var ph=document.getElementById("phone_num").value;
+  var clg=document.getElementById("clg_name").value;
+  var myObj = { dept: dept,email:em,phone:ph,college:clg};
+  
+	var myJSON = JSON.stringify(myObj);
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+			
+    }
+    }
+    xmlhttp.open("GET", "insert.php?txt="+myJSON, true);
+    xmlhttp.send(); 
+	alert("Registered Successfully,Thank you");	
+}
+btn1.onclick = function() {
+  modal.style.display = "block";
+  document.getElementById("dept_name").defaultValue = "mechanical";
+}
+btn2.onclick = function() {
+  modal.style.display = "block";
+  document.getElementById("dept_name").defaultValue = "chemical";
+}
+btn3.onclick = function() {
+  modal.style.display = "block";
+  document.getElementById("dept_name").defaultValue = "ft";
+}
+btn4.onclick = function() {
+  modal.style.display = "block";
+  document.getElementById("dept_name").defaultValue = "cse";
+}
+btn5.onclick = function() {
+  modal.style.display = "block";
+  document.getElementById("dept_name").defaultValue = "it";
+}
+btn6.onclick = function() {
+  modal.style.display = "block";
+  document.getElementById("dept_name").defaultValue = "eie";
+}
+btn7.onclick = function() {
+  modal.style.display = "block";
+  document.getElementById("dept_name").defaultValue = "ece";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+span1.onclick = function() {
+  modal1.style.display = "none";
+  document.getElementById("text").innerHTML = "";
+}
+window.onclick = function(event) {
+  if (event.target == modal || event.target == modal1) {
+    modal.style.display = "none";
+	modal1.style.display = "none";
+	document.getElementById("text").innerHTML = "";
+  }
+}
+b.onclick = function() {
+	modal1.style.display = "block";
+	
+  
+$.post("fetch.php", { dept: "civil"},function(data){$("#textres").html(data);}); 	
+}
+b1.onclick = function() {
+  modal1.style.display = "block";
+  
+$.post("fetch.php", { dept: "mechanical"},function(data){$("#textres").html(data);}); 
+ 
+}
+b2.onclick = function() {
+  modal1.style.display = "block";
+$.post("fetch.php", { dept: "chemical"},function(data){$("#textres").html(data);}); 
+}
+b3.onclick = function() {
+  modal1.style.display = "block";
+$.post("fetch.php", { dept: "ft"},function(data){$("#textres").html(data);}); 
+}
+b4.onclick = function() {
+  modal1.style.display = "block";
+$.post("fetch.php", { dept: "cse"},function(data){$("#textres").html(data);}); 
+}
+b5.onclick = function() {
+  modal1.style.display = "block";
+$.post("fetch.php", { dept: "it"},function(data){$("#textres").html(data);});   
+}
+b6.onclick = function() {
+  modal1.style.display = "block";
+$.post("fetch.php", { dept: "eie"},function(data){$("#textres").html(data);}); 
+}
+b7.onclick = function() {
+  modal1.style.display = "block";
+$.post("fetch.php", { dept: "ece"},function(data){$("#textres").html(data);});  
+}
+</script>
+</body>
+</html>
+

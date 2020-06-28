@@ -1,0 +1,46 @@
+﻿.top
+{
+	background-color:lightgreen;
+	min-height:80px;
+	justify-content:space-around;
+	align-items:center;
+}
+.top1
+{
+width:90%;
+height:2%;
+margin:0 auto;
+color:white;
+}
+.one
+{
+	float:left;
+}
+.two
+{
+	padding-top:10px;
+	float:right;
+}
+table
+{
+	border:1px solid red;
+	height:50%;
+}
+table td
+{
+	border:1px solid red;
+	padding:10px;
+}
+.box
+{
+	width:60%;
+	height:50%;
+	margin-left:20%;
+	margin-top:10%;
+}
+.search_button
+{
+	padding:10px;
+	background-color:lightgreen;
+	color:blue;
+}
