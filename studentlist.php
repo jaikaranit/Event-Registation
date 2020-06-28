@@ -1,4 +1,4 @@
-<html >
+<html > 
 <head>
     <meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="./css/nextuser.css">
@@ -16,17 +16,17 @@
 </div>  
 <div class="box">
 <?php
- $email = $_POST['email'];
+ $email = $_POST['email'];  //getting attributes by post method
  $dbhost = "localhost";
  $dbuser = "root";
  $dbpass = "";
  $db = "kec";
- $conn=mysqli_connect($dbhost,$dbuser,$dbpass,$db);
- $sql="select * from events where email='$email'";
- $disp = mysqli_query($conn, $sql);
+ $conn=mysqli_connect($dbhost,$dbuser,$dbpass,$db);  //daabase connectivity
+ $sql="select * from events where email='$email'";   //select querie in sql
+ $disp = mysqli_query($conn, $sql);  execution of select querie
  echo "<center><table>";
  echo "<tr><th>department</th><th>Email</th><th>phone</th><th>College</th></tr>";
- while($row =mysqli_fetch_array($disp,MYSQLI_ASSOC))
+ while($row =mysqli_fetch_array($disp,MYSQLI_ASSOC))  //display every records drom db as table
 {
     echo "<tr>";
     foreach($row as $cell)
